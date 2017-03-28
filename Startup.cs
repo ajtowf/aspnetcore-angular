@@ -26,6 +26,7 @@ namespace aspnetcore_angular_sample
         {
             // Add framework services.
             services.AddMvc();
+            services.AddNodeServices(x => x.LaunchWithDebugging = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -37,6 +37,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.2",
+    "node-chartist": "^1.0.2",
     "preboot": "^4.5.2",
     "raw-loader": "^0.5.1",
     "rxjs": "^5.0.1",
