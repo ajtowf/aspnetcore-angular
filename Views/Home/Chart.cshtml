@@ -1,11 +1,15 @@
 @{ 
-  ViewData["Title"] = "Chart"; 
+  ViewData["Title"] = "Charting with Chartis.js"; 
 } 
 
 @section styles {
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
 }
 
-<h2>@ViewData["Title"].</h2> 
 
-@Html.Raw(ViewData["ResultFromNode"])
+<div class="container">
+  <h2>
+    <a href="https://gionkunz.github.io/chartist-js/">@ViewData["Title"]</a>
+  </h2>
+  @Html.Raw(ViewData["ResultFromNode"])
+</div>

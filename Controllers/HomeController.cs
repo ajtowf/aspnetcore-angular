@@ -13,10 +13,17 @@ namespace aspnetcore_angular_sample.Controllers
 
         public async Task<IActionResult> Chart([FromServices] INodeServices nodeServices)
         {
-            var options = new { 
-                width = 400, height = 200, 
-                showArea = true, showPoint = true, fullWidth = true };
-            var data = new {
+            var options = new 
+            { 
+                width = 800, 
+                height = 600, 
+                showArea = true, 
+                showPoint = true,
+                fullWidth = true 
+            };
+
+            var data = new 
+            {
                 labels = new[] { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" },
                 series = new[] {
                     new[] { 1, 5, 2, 5, 4, 3 },
@@ -26,7 +33,8 @@ namespace aspnetcore_angular_sample.Controllers
             };
 
             ViewData["ResultFromNode"] = await nodeServices.InvokeAsync<string>(
-                "chartModule.js", "line", options, data); 
+                "chartModule.js", "line", options, data);
+                
             return View();
         }
 
