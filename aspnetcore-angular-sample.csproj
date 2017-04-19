@@ -29,7 +29,7 @@
     <Exec Command="node node_modules/webpack/bin/webpack.js --env.prod" />
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
-      <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**; chartModule.js" />
+      <DistFiles Include="wwwroot\dist\**; ClientApp\dist\**; chartModule.js; node_modules\**" />
       <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>%(DistFiles.Identity)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
